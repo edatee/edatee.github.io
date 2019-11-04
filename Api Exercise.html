@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Api Exercise Giphy</title>
+</head>
+
+<body>
+    <h1>Api Exercise Giphy</h1>
+    <div id="hello1"></div>
+    <form id="gifForm">
+        <input type="text" id="searchType">
+        <button>submit</button>
+    </form>
+    <script>
+        const form = document.querySelector('#gifForm')
+        form.onsubmit = function (event) {
+            event.preventDefault()
+
+            const inputValue = document.querySelector('#searchType')
+            console.log(inputValue.value)
+
+
+
+
+            fetch(`http://api.giphy.com/v1/gifs/random?api_key=lp3WA7WDMOm0qBkCD7vdRYlrz4zgfZJB&tag=${inputValue.value}`)
+                .then(function (response) {
+                    return response.json()
+                })
+                .then(function (result) {
+                    console.log(result.data.image_original_url)
+                    const giphy = document.querySelector('#hello1')
+                    const gifUrl = result.data.image_original_url
+                    giphy.innerHTML = `<img src="${gifUrl}"/>`;
+                    // const chuckJokes = document.querySelector('#hello')
+                    // chuckJokes.innerText = result.value;
+                    // document.jokes
+                })
+        }
+
+    </script>
+</body>
+
+</html>
+
+
+<!-- create from
+conteriner
+prevent default
+get tag, input text value 
+ -->

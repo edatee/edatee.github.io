@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> The FizzBuzz Logic Challenge </h1>
+
+    <button onclick="doFizzBuzz()"> Start Now </button>
+    <p id="result"> </p>
+
+    <script>
+        function doFizzBuzz() {
+            const num = prompt("Please enter a number:", "Number please");  // a prompt will appear to ask you input a number
+
+            // Write your logic here
+            if (num % 5 == 0 && num % 3 == 0) {
+                console.log("FizzBuzz")
+            }
+            else if (num % 5 == 0) {
+                console.log("Buzz")
+            }
+
+            else if (num % 3 == 0) {
+                console.log("Fizz")
+            }
+            else if (isNaN(num)) {
+                window.alert("This is not a number. Start again with a number")
+            }
+            else {
+                console.log(num)
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
