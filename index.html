@@ -1,52 +1,111 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="index.css" />
-    <script src="jquery-3.2.1.js"></script>
-    <title>My Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="My Portfolio">
-    <meta property="og:description" content="Built with Next Academy">
-    <meta property="og:site_name" content="My Portfolio">
-    <meta property="og:image" content="https://www.nextacademy.com/img/share/nextacademy-generic.jpg">
-  </head>
-  <body>
-    <div id="navbar">
-    <a href="#about" class="nav-links'>Go To About Me</a>"
-    </div>
-    <div class="container">
+<!DOCTYPE html>
+<html lang="en">
 
-      <div class="small-container" id="about">
-        <h1>Hello, I'm EDa.</h1>
-        <img src="https://tinypng.com/images/social/website.jpg">
-        <p>This is my first website, and I'm interested in coding.</p>
-        <p>I'm from Klang and I like eating.</p>
-      </div>
+<head>
 
-      <div class="small-container" id="show">
-        <h1>What I've done in the past</h1>
-        <ol>
-          <li>Learn to live</li>
-          <li>Some digital marketing</li>
-          <li>Travel</li>
-        </ol>
-        <a href="https://www.nextacademy.com">
-          Learn to code from Next Academy
-        </a>
-      </div>
-<div class="small-container">
-  <button>click me for surpirse</button>
-  <div id="haha"></div> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Day 1</title>
+
+</head>
+
+<body>
+    <!-- Headings are all below here -->
+    <h1 class="orange-text">Hello World</h1>
+    <h2>Hello World</h2>
+    <h3>Hello World</h3>
+    <h4 class="orange-text">Hello World</h4>
+    <h5>Hello World</h5>
+    <h6>Hello World</h6>
+
+    <p id="para1">Lorem.
+    </p>
+    <p id="box-example">Lorem ipsum dolor sit amet, <strong>adipisicing elit.</strong> Dignissimos exercitationem
+        ducimus,
+        <span class="orange-text">vero</span>
+        sapiente aperiam <u>itaque</u> , <br />>quisquam quasi at maiores dolor veritatis totam iure dolores
+        deserunt quos enim
+        id.</p>
+    <a href="https://youtube.com" target="_blank">Take me to Youtube</a>
+
+    <img src="../Downloads/IMG_20190530_164843.jpg" alt="pizza" width="400">
+
+    <ul>
+        <li>cycling</li>
+        <li>swimming</li>
+    </ul>
+
+    <ol>
+        <li>swimming</li>
+        <li>dancing
+        </li>
+    </ol>
+
+    <div></div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+<div class="new1">
+
+    <p>fksjd</p>
+    <p>qqqqqqqq</p>
+    <p>wwwwwwww</p>
+</div>
+
+<div class="new1">
+
+    <p>fksjd</p>
+    <p>qqqqqqqq</p>
+    <p>wwwwwwww</p>
+</div>
+
+<div class="new1">
+
+    <p>fksjd</p>
+    <p>qqqqqqqq</p>
+    <p>wwwwwwww</p>
+
+</div>
+
+<div class="new3">
+    <div class="new2">
+
+        <p>12345</p>
+        <p>qqqqqqqq</p>
+        <p>wwwwwwww</p>
+        <p>1111</p>
     </div>
-  </body>
-  <script>
-  $(document).ready(function() {
-    $("#surprise-button").click(function(e) {
-      $.get("http://api.giphy.com/v1/gifs/random?tag=cat&api_key=dc6zaTOxFJmzC", function(res) {
-        $('#haha').html('<img src="' + res.data.image_url + '">' )
-      })
-    })
-  })
-</script>
+
+    <div class="new2">
+
+        <p>12345</p>
+        <p>qqqqqqqq</p>
+        <p>wwwwwwww</p>
+        <p>1111</p>
+    </div>
+
+    <div class="new2">
+
+        <p>12345</p>
+        <p>qqqqqqqq</p>
+        <p>wwwwwwww</p>
+        <p>1111</p>
+    </div>
+</div>
+
+
 </html>

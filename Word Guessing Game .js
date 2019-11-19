@@ -99,7 +99,8 @@ function setupForm() {
         displayAlphabetsGuessed(guessedAlphabets);
         console.log(input.value);
     }
-}
+} 
+
 
 //to start with empty blank (setup function)
 
