@@ -5,7 +5,7 @@ const wordToGuess = "washington";
 const wordState = [];
 //'w', undefined, undefined, undefined, 'i', undefined, 'g', 't', undefined, 'n'
 
-let guessesLeft = 8;
+let guessesLeft = 10;
 
 const guessedAlphabets = [];
 //'w', 'i', 'g', 't', 'u', 'n'
@@ -63,6 +63,18 @@ function guess(wordToGuess, wordState, currGuess) {
 }
 // guess(wordToGuess, wordState, 'a')
 
+function checkWon(wordState) {
+    let hasBlank = false;
+    for (let i = 0; i < wordState.length; i++) {
+        // if any part of the wordState has blank, return true
+        if (wordState[i] == '_') {
+            hasBlank = true;
+        }
+    }
+    return !hasBlank;
+}
+
+
 function setup() {
     for (let i = 0; i < wordToGuess.length; i++) {
         wordState.push("_")
@@ -84,8 +96,19 @@ function setupForm() {
 
     form.onsubmit = function (event) {
         event.preventDefault();
-        const currentInput = input.value;
+        const currentInput = input.value.toLowerCase();
         //why input.value instead of input only 
+        // toLowerCase() makes the input into lowercase 
+
+        // clear input field
+        input.value = '';
+
+        // check if input is valid 
+        if (!validateInput(currentInput, guessedAlphabets)) {
+            window.alert('Please choose a character from a-z that has not been guessed before')
+            return;
+        }
+
         guessedAlphabets.push(currentInput);
         // ^what is push. Add guess to previous guesses 
 
@@ -95,11 +118,31 @@ function setupForm() {
 
         // guess the alphabets 
         guess(wordToGuess, wordState, currentInput);
+
+        // to check if user has won
+        const won = checkWon(wordState)
+        if (won) {
+            window.alert('You Won!')
+        }
+        // to check if user has lost
+        else if (guessesLeft == 0) {
+            window.alert('You lost!')
+        }
+
         // show the alphabets guessed 
         displayAlphabetsGuessed(guessedAlphabets);
         console.log(input.value);
     }
-} 
+}
+
+// if guess is a valid choice, return true, else return false
+function validateInput(guess, guessedAlphabets) {
+    // check that guess is only one character and user has not guessed before
+    if (guess.length == 1 && guessedAlphabets.indexOf(guess) == -1) {
+        return true;
+    }
+    return false;
+}
 
 
 //to start with empty blank (setup function)
