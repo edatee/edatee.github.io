@@ -1,11 +1,13 @@
 
 
-const wordToGuess = "washington";
+const allWordsToGuess = ['washington', 'wisconsin', 'california', 'illinois', 'texas', 'pennsylvania', 'massachusetts', 'minnesota', 'nevada', 'indiana', 'hawaii', 'alaska', 'florida', 'michigan', 'colorado'];
+
+let wordToGuess = allWordsToGuess[Math.floor(Math.random() * allWordsToGuess.length)];
 
 const wordState = [];
 //'w', undefined, undefined, undefined, 'i', undefined, 'g', 't', undefined, 'n'
 
-let guessesLeft = 10;
+let guessesLeft = 14;
 
 const guessedAlphabets = [];
 //'w', 'i', 'g', 't', 'u', 'n'
